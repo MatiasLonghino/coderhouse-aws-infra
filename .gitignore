@@ -1,0 +1,21 @@
+# Directorios generados por Terraform
+**/.terraform/*
+
+# Archivos de estado
+*.tfstate
+*.tfstate.*
+
+# Archivos de variables sensibles
+*.tfvars
+*.tfvars.json
+
+# Archivos de errores
+crash.log
+crash.*.log
+
+# Archivos de planes
+*.tfplan
+
+# Archivos de configuracion local
+.terraformrc
+terraform.rc
