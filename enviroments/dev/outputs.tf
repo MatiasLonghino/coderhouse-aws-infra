@@ -22,3 +22,21 @@ output "audit_role_arn" {
   description = "ARN del rol de auditoria"
   value       = module.identity.audit_role_arn
 }
+
+
+# Outputs del modulo Storage
+
+output "data_bucket_name" {
+  description = "Nombre del bucket S3 de datos del entorno DEV"
+  value       = module.storage.data_bucket_name
+}
+
+output "data_bucket_arn" {
+  description = "ARN del bucket S3 de datos del entorno DEV"
+  value       = module.storage.data_bucket_arn
+}
+
+output "data_bucket_id" {
+  description = "ID del bucket S3 de datos del entorno DEV"
+  value       = module.storage.data_bucket_id
+}

@@ -11,12 +11,21 @@ module "network" {
 }
 
 
+# Modulo de almacenamiento
+module "storage" {
+  source = "../../modules/storage"
+
+  environment      = var.environment
+  data_bucket_name = coalesce(var.data_bucket_name, "coderhouse-data-${data.aws_caller_identity.current.account_id}")
+}
+
+
 # Modulo de identidad
 module "identity" {
   source = "../../modules/identity"
 
   environment = var.environment
 
-  data_bucket_name = "coderhouse-data-${data.aws_caller_identity.current.account_id}"
+  data_bucket_name = module.storage.data_bucket_name
   data_prefix      = "raw/"
 }

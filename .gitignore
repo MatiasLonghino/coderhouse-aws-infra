@@ -1,5 +1,5 @@
 # Directorios generados por Terraform
-**/.terraform/*
+**/.terraform/
 
 # Archivos de estado
 *.tfstate
@@ -19,3 +19,19 @@ crash.*.log
 # Archivos de configuracion local
 .terraformrc
 terraform.rc
+
+# Credenciales y configuracion sensible local
+**/.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Temporales y archivos de editores
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~

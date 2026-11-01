@@ -15,3 +15,9 @@ variable "vpc_cidr" {
   type        = string
   default     = "10.0.0.0/16"
 }
+
+variable "data_bucket_name" {
+  description = "Nombre opcional del bucket S3 de datos; por defecto se usa coderhouse-data-<account_id>"
+  type        = string
+  default     = null
+}
